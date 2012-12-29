@@ -12,4 +12,5 @@ def direct_templates(theme_dir):
 
 	return [splitext(basename(f))[0] for f in glob(theme_dir+"/templates/*.html")]
 
+# TODO: Use TEMPLATE_PAGES instead and set DIRECT_TEMPLATES to []
 DIRECT_TEMPLATES = direct_templates(THEME)
