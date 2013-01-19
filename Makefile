@@ -73,7 +73,6 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
-	ghp-import -b $(GITHUB_PUBLISH_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PUBLISH_BRANCH)
+	ghp-import -p -b $(GITHUB_PUBLISH_BRANCH) $(OUTPUTDIR)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
