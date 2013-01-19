@@ -9,5 +9,51 @@
 	<![endif]-->
 </head>
 <body>
-	{% block content %}Content{% endblock %}
+
+    {% block sidebar_block %}
+    <div id="sidebar">
+        {% block navigation_block %}
+        <div id="navigation">
+            {% block navigation %}
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/treatable-ailments.html">Treatable Ailments</a></li>
+                <li><a href="/traditional-chinese-medicine/index.html">Traditional Chinese Medicine</a><ul>
+                    <li><a href="/traditional-chinese-medicine/acupuncture.html">Acupuncture</a></li>
+                    <li><a href="/traditional-chinese-medicine/herbal-medicine.html">Herbal Medicine</a></li>
+                    <li><a href="/traditional-chinese-medicine/pcos.html"><abbr title="Polycystic Ovary Syndrome">PCOS</abbr></a></li>
+                </ul></li>
+            </ul>
+            {% endblock %}
+        </div>
+        {% endblock %}
+        {% block sidebar %}{% endblock %}
+    </div>
+    {% endblock %}
+
+    {% block content_block %}
+    <div id="content">
+
+        {% block heading_block %}
+            <div id="heading">
+            {% block heading %}<h1>Page Title</h1>{% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block headline_block %}
+            <blockquote id="headline">
+            {% block headline %}
+                <p>This is where you enter a few sentences to evoke emotion from the user... or something.</p>
+            {% endblock %}
+            </blockquote>
+        {% endblock %}
+
+    	{% block content %}Page Content{% endblock %}
+
+    </div>
+    {% endblock %}
+
 </body>
