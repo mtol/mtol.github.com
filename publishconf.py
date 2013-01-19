@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-import sys
-sys.path.append('.')
+import sys, os.path
+sys.path.append(os.path.dirname(__file__))
 from pelicanconf import *
 
 SITEURL = 'http://mackenzietolhurst.com'

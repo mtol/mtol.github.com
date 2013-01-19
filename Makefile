@@ -16,7 +16,10 @@ SSH_PORT=22
 SSH_USER=root
 SSH_TARGET_DIR=/var/www
 
+GITHUB_PUBLISH_BRANCH=master
 DROPBOX_DIR=~/Dropbox/Public/
+
+all: html
 
 help:
 	@echo 'Makefile for a pelican Web site                                        '
@@ -70,7 +73,7 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
-	ghp-import $(OUTPUTDIR)
+	ghp-import -b $(GITHUB_PUBLISH_BRANCH) $(OUTPUTDIR)
 	git push origin gh-pages
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
