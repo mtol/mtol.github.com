@@ -74,6 +74,6 @@ ftp_upload: publish
 
 github: publish
 	ghp-import -b $(GITHUB_PUBLISH_BRANCH) $(OUTPUTDIR)
-	git push origin gh-pages
+	git push origin $(GITHUB_PUBLISH_BRANCH)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
