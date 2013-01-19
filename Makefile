@@ -38,6 +38,8 @@ help:
 	@echo '   github                           upload the web site via gh-pages   '
 	@echo '                                                                       '
 
+install:
+	pip install pelican Markdown ghp-import
 
 html: clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
@@ -75,4 +77,4 @@ ftp_upload: publish
 github: publish
 	ghp-import -p -b $(GITHUB_PUBLISH_BRANCH) $(OUTPUTDIR)
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
+.PHONY: install html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
