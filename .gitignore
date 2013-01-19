@@ -1,2 +1,4 @@
 _site
 *.pid
+*.pyc
+output
