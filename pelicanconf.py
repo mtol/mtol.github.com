@@ -28,6 +28,7 @@ TEMPLATE_PAGES = {
     PAGES+'/index.html': 'index.html',
 }
 TEMPLATE_PAGES[PAGES+'/README.md'] = 'README.md'
+TEMPLATE_PAGES[BASEDIR+'/CNAME'] = 'CNAME'
 
 # The templates within the theme to be directly rendered -- of which we want
 # none to be as we are going to mirror the site structure 1:1 using /pages
