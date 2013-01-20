@@ -266,7 +266,9 @@ p {
   margin: 0.75em 0;
 }
 footer {
-  padding-top: 1.5em;
+  padding: 1em 0;
+}
+footer p {
   font-size: 0.7em;
 }
 footer a {
@@ -334,24 +336,5 @@ footer a {
   #body {
     margin: 0 auto;
     max-width: 60em;
-  }
-}
-/* @media screen and (min-width: 1392px) */
-@media screen and (min-width: 87em) {
-  body {
-    /* Reset baseline grid to 16/16 = 1.0 */
-  
-    font-size: 1em;
-  }
-  .main {
-    width: 75%;
-  }
-}
-/* @media screen and (min-width: 1680px) */
-@media screen and (min-width: 1200px) {
-  body {
-    /* Zoom baseline grid to 17/16 = 1.0625 */
-  
-    font-size: 1.0625em;
   }
 }
