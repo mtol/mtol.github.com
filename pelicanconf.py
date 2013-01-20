@@ -23,7 +23,12 @@ THEME = BASEDIR+'/theme'
 PAGES = BASEDIR+'/pages'
 
 # The page files to be directly rendered
-TEMPLATE_PAGES = pages(PAGES)
+# TEMPLATE_PAGES = pages(PAGES)
+TEMPLATE_PAGES = {
+    PAGES+'/index.html': 'index.html',
+}
+TEMPLATE_PAGES[PAGES+'/README.md'] = 'README.md'
+
 # The templates within the theme to be directly rendered -- of which we want
 # none to be as we are going to mirror the site structure 1:1 using /pages
 DIRECT_TEMPLATES = []

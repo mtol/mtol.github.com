@@ -1,8 +1,12 @@
 # Linden Mackenzie Tolhurst
 
+
 ## Prerequisites
 
-    pip install pelican ghp-import
+    make install
+
+Will install a few python dependencies (namely `pelican`, `ghp-import` and `Markdown`) to your local environment.
+
 
 ## Instructional
 
@@ -21,6 +25,15 @@ The `content` directory, per a typical Pelican setup, is for blog posts which is
 
 You can build the project by running `make`, and export it using `make github` which builds into the `output` directory and pushes its contents to `master` using [`ghp-import`][ghp-import].
 
+
+## Goldren Grid System
+
+The base of the website is developed atop [Joni Korpi's][joni-korpi] [Golden Grid System][ggs].
+
+
 [pelican]: http://docs.getpelican.com "Pelican"
 [ghp-import]: https://github.com/davisp/ghp-import "davisp/ghp-import"
 [ghp]: http://pages.github.com/
+[joni-korpi]: http://jonikorpi.com/
+[ggs]: http://goldengridsystem.com/ "Golden Grid System by Joni Korpi"
+[ggs-gh]: https://github.com/jonikorpi/Golden-Grid-System "jonikorpi/Golden-Grid-System"

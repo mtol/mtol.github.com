@@ -1,0 +1,357 @@
+/*
+*
+*  Golden Grid System (1.01)    <http://goldengridsystem.com/>
+*  by Joni Korpi                <http://jonikorpi.com/>
+*  licensed under MIT           <http://opensource.org/licenses/mit-license.php>
+*   
+*/
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+*
+*  Consistency fixes
+*  adopted from http://necolas.github.com/normalize.css/
+*
+*/
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b, strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+*
+*  Simple fluid media
+*
+*/
+figure {
+  position: relative;
+}
+figure img,
+figure object,
+figure embed,
+figure video {
+  max-width: 100%;
+  display: block;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/*
+*
+*   Zoomable baseline grid
+*   type size presets
+*
+*/
+body {
+  /* 16px / 24px */
+
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.small {
+  /* 13px / 18px */
+
+  font-size: 0.8125em;
+  line-height: 1.3846153846153846em;
+}
+.normal, h3 {
+  /* 16px / 24px */
+
+  font-size: 1em;
+  line-height: 1.5em;
+  /* 24 */
+
+}
+.large, h2, h1 {
+  /* 26 / 36px */
+
+  font-size: 1.625em;
+  line-height: 1.3846153846153846em;
+}
+.huge {
+  /* 42px / 48px */
+
+  font-size: 2.625em;
+  line-height: 1.1428571428571428em;
+}
+.massive {
+  /* 68px / 72px */
+
+  font-size: 4.25em;
+  line-height: 1.0588235294117647em;
+}
+.gigantic {
+  /* 110px / 120px */
+
+  font-size: 6.875em;
+  line-height: 1.0909090909090908em;
+}
+/*
+*  Simple elastic gutters
+*  Note: box-sizing will not work in IE6-7
+*/
+.wrapper {
+  padding: 0 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+*
+*  Fixes for IE6-8
+*  http://jonikorpi.com/leaving-old-IE-behind/
+*
+*/
+.ie body {
+  width: 40em;
+  margin: 0 auto;
+  font-size: 1.0625em;
+}
+.ie h1 {
+  /* 42px / 48px */
+
+  font-size: 2.625em;
+  line-height: 1.1428571428571428em;
+  margin: 1.1428571428571428em 0 0.5714285714285714em;
+}
+
+/*
+ _     _           _            
+| |   (_)_ __   __| | ___ _ __  
+| |   | | '_ \ / _` |/ _ \ '_ \ 
+| |___| | | | | (_| |  __/ | | |
+|_____|_|_| |_|\__,_|\___|_| |_|
+                                
+*/
+
+
+/*
+ *
+ *  Four-column grid active
+ *  ----------------------------------------
+ *  Margin   | #  1   2   3   4   |   Margin
+ *  5.55555% | %  25  50  75  100 | 5.55555%
+ *
+ */
+#body {
+  margin: 0 5.555555555555555%;
+  max-width: #;
+}
+h1, h2 {
+  margin: 0.9230769230769231em 0 1.3846153846153846em;
+}
+h2 {
+  font-weight: normal;
+}
+h3 {
+  margin: 1.5em 0 1.5em;
+}
+h4 {
+  margin: 0.75em 0;
+}
+p {
+  margin: 0.75em 0;
+}
+footer {
+  padding-top: 1.5em;
+  font-size: 0.7em;
+}
+footer a {
+  text-decoration: none;
+  color: #999;
+}
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) {
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+  
+    /*font-size: 1.0625em;*/
+  }
+  h1 {
+    /* 42px / 48px */
+  
+    font-size: 2.625em;
+    line-height: 1.1428571428571428em;
+    margin: 1.1428571428571428em 0 0.5714285714285714em;
+  }
+  .three-way .wrapper {
+    float: left;
+    width: 50%;
+  }
+  .three-way .wrapper:last-child {
+    width: 100%;
+  }
+}
+
+/*
+ *  Eight-column grid active
+ *  ----------------------------------------------------------------------
+ *  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+ *  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+ */
+/* @media screen and (min-width: 720px) *//*45em*/
+@media screen and (min-width: 55.5em) {
+  body {
+    /* Reset baseline grid to 16/16 = 1 */
+  
+    font-size: 1em;
+  }
+  .main {
+    float: left;
+    margin: 0;
+  }
+  .three-way .wrapper {
+    float: left;
+    width: 33.33333333332%;
+  }
+  .three-way .wrapper:last-child {
+    width: 33.33333333332%;
+  }
+}
+/* @media screen and (min-width: 888px) */
+@media screen and (min-width: 55.5em) {
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+  
+    /*font-size: 1.0625em;*/
+  }
+}
+@media screen and (min-width: 67.5em) {
+  #body {
+    margin: 0 auto;
+    max-width: 60em;
+  }
+}
+/* @media screen and (min-width: 1392px) */
+@media screen and (min-width: 87em) {
+  body {
+    /* Reset baseline grid to 16/16 = 1.0 */
+  
+    font-size: 1em;
+  }
+  .main {
+    width: 75%;
+  }
+}
+/* @media screen and (min-width: 1680px) */
+@media screen and (min-width: 1200px) {
+  body {
+    /* Zoom baseline grid to 17/16 = 1.0625 */
+  
+    font-size: 1.0625em;
+  }
+}
